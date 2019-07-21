@@ -1,0 +1,24 @@
+server:
+  port: 8889
+  #测试时关闭自我保护机制，保证不可用服务及时退出
+  enable-self-preservation: false
+  evication-interval-timer-in-ms: 2000
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8888/eureka/
+      #集群时改为true，将自己注册给自己的注册中心
+    register-with-eureka: true
+    fetch-registry: true
+#定义服务名称
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  application:
+    name: EUREKA-SERVER02

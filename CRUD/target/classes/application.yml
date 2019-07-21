@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/employee?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+mybatis:
+  mapper.locations: classpath:*.xml
+  type-aliases-package: com.crud.pojo
+server:
+  port: 8000

@@ -1,0 +1,12 @@
+server:
+  port: 8555
+spring:
+  application:
+    name: consul-member
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #默认情况下服务ip地址，地址随机生成英文，下面指定地址
+        hostname: 192.168.18.220
